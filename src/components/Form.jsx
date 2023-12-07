@@ -19,7 +19,8 @@ export function convertToEmoji(countryCode) {
 }
 
 function Form() {
-  const { lat, lng } = useUrlPosition();
+  const [lat, lng] = useUrlPosition();
+/*const {lat, lng} = useUrlPosition(); */ 
 
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
 

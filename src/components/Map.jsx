@@ -23,7 +23,7 @@ function Map() {
     getPosition,
   } = useGeolocation();
 
-  const { mapLat, mapLng } = useUrlPosition();
+  const [mapLat, mapLng] = useUrlPosition();
 
   useEffect(
     function () {
@@ -84,8 +84,8 @@ function ChangeCenter({ position }) {
 function DetectClick() {
   const navigate = useNavigate();
 
-useMapEvents({
-  click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
-});
+  useMapEvents({
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+  });
 }
 export default Map;
