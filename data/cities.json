@@ -1,3 +1,28 @@
 {
-  "cities": []
+  "cities": [
+    {
+      "cityName": "Las Pedroneras",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-12-08T20:21:16.423Z",
+      "notes": "",
+      "position": {
+        "lat": "39.466416841625445",
+        "lng": "-2.6367187500000004"
+      },
+      "id": 1
+    },
+    {
+      "cityName": "Valladolid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-12-08T20:21:19.249Z",
+      "notes": "",
+      "position": {
+        "lat": "41.638067614650865",
+        "lng": "-4.899902343750001"
+      },
+      "id": 2
+    }
+  ]
 }
