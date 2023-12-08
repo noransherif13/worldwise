@@ -25,6 +25,7 @@ function Form() {
   const [lat, lng] = useUrlPosition();
   /*const {lat, lng} = useUrlPosition(); */
   const { createCity, isLoading } = useCities();
+  const navigate = useNavigate();
 
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
 
@@ -66,7 +67,7 @@ function Form() {
     [lng, lat]
   );
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     if (!cityName || !date) return;
@@ -79,7 +80,8 @@ function Form() {
       notes,
       position: { lat, lng },
     };
-    createCity(newCity);
+    await createCity(newCity);
+    navigate("/app/cities");
   }
 
   if (isLoadingGeocoding) return <Spinner />;
